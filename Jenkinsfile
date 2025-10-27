@@ -56,7 +56,7 @@ stage('Deploy - Production') {
     input { message 'Desplegamos a producción ?'}
     steps {
        sh """
-          oc set image deployment ${DEPLOYMENT_STAGE} shopping-cart-production=quay.io/rodrigo_stiven/do400-deploying-environments:build-9 -n ${APP_NAMESPACE} --record
+          oc set image deployment ${DEPLOYMENT_PRODUCTION} shopping-cart-production=quay.io/rodrigo_stiven/do400-deploying-environments:build-9 -n ${APP_NAMESPACE} --record
           """
   }
  }
